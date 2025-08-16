@@ -2,9 +2,9 @@ import loginPage from '@pages/loginPage';
 import productPage from '@pages/productPage';
 
 describe('Login Page', () => {
-  let users: any;
+  let users: Users;
   before(() => {
-    cy.fixture('users').then((data) => {
+    cy.fixture<Users>('users').then((data) => {
       users = data;
     });
   });
@@ -14,7 +14,7 @@ describe('Login Page', () => {
   });
 
   it('logs in successfully with valid credentials', () => {
-    loginPage.login(users.validUser.username, users.validUser.password);
+    cy.login(users.validUser.username, users.validUser.password);
     cy.url().should('eq', Cypress.config().baseUrl + '/inventory.html');
     productPage.title().should('be.visible').and('have.text', 'Products');
   });

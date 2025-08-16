@@ -12,5 +12,5 @@
       "@pages/*": ["cypress/pages/*"]
     }
   },
-  "include": ["cypress/**/*.ts"]
+  "include": ["cypress/**/*.ts", "cypress/**/*.d.ts"]
 }

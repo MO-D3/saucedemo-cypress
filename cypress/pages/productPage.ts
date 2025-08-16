@@ -19,10 +19,6 @@ class ProductPage {
     return cy.get('[data-test="product_sort_container"]');
   }
 
-  inventoryList() {
-    return cy.get('.inventory_list');
-  }
-
   addSauceLabsBackpack() {
     return cy.get('[data-test="add-to-cart-sauce-labs-backpack"]');
   }

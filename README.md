@@ -31,6 +31,10 @@ This opens the Cypress Test Runner for interactive debugging and visual feedback
 - **Login Page:** Valid/invalid credentials, error messages, locked out user
 - **Product Page:** Add/remove items from cart, logout via drawer menu
 
+## Test utilities
+- `cypress/fixtures/users.json` contains test users (e.g. `validUser`, `lockedUser`, `invalidUser`).
+- `cy.login(username, password)` is a custom command (in `cypress/support/commands.ts`) that visits `/` and performs login steps.
+
 ## SauceDemo Web App
 - URL: [https://www.saucedemo.com](https://www.saucedemo.com)
 

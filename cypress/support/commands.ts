@@ -7,7 +7,21 @@
 //   https://on.cypress.io/custom-commands
 // ***********************************************************
 
-// No custom commands are necessary for these tests.  The page
-// objects encapsulate all of the interactions required.  This
-// file exists so that future extensions can add reusable
-// commands without polluting the global `index.ts` bundle.
+// Custom commands for the test suite.
+// Adds a reusable login command to avoid repeating login steps.
+declare global {
+	namespace Cypress {
+		interface Chainable {
+			login(username: string, password: string): Chainable<void>;
+		}
+	}
+}
+
+Cypress.Commands.add('login', (username: string, password: string) => {
+	cy.visit('/');
+	cy.get('[data-test="username"]').clear().type(username);
+	cy.get('[data-test="password"]').clear().type(password);
+	cy.get('[data-test="login-button"]').click();
+});
+
+export {};

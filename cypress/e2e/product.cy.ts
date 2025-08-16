@@ -1,18 +1,18 @@
 import loginPage from '@pages/loginPage';
 import productPage from '@pages/productPage';
 import drawerMenuPage from '@pages/drawerMenuPage';
+import inventoryList from '@pages/inventoryList';
 
 describe('Product Page', () => {
-  let users: any;
+  let users: Users;
   before(() => {
-    cy.fixture('users').then((data) => {
+    cy.fixture<Users>('users').then((data) => {
       users = data;
     });
   });
 
   beforeEach(() => {
-    loginPage.visit();
-    loginPage.login(users.validUser.username, users.validUser.password);
+    cy.login(users.validUser.username, users.validUser.password);
     cy.url().should('eq', Cypress.config().baseUrl + '/inventory.html');
     productPage.title().should('be.visible').and('have.text', 'Products');
   });
@@ -30,5 +30,9 @@ describe('Product Page', () => {
     productPage.shoppingCartBadge().should('be.visible').and('have.text', '1');
     productPage.removeSauceLabsBackpack().click();
     productPage.shoppingCartBadge().should('not.exist');
+  });
+
+  it('should display 6 products in the inventory list after login', () => {
+    inventoryList.getAllItems().should('have.length', 6);
   });
 });

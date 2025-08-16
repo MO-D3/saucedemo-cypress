@@ -1,4 +1,8 @@
 class InventoryList {
+  getAllItems() {
+    return cy.get('.inventory_item');
+  }
+
   private inventoryItem(name: string) {
     return cy
       .get('.inventory_item')
