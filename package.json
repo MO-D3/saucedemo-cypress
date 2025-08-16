@@ -1,0 +1,14 @@
+{
+  "name": "saucedemo-e2e-tests",
+  "version": "1.0.0",
+  "description": "Automated end-to-end tests for the SauceDemo web application using Cypress and TypeScript.",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.5",
+    "cypress": "14.5.4 ",
+    "typescript": "^5.9.2 "
+  }
+}

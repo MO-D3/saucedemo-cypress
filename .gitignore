@@ -1,0 +1,30 @@
+# Cypress output
+cypress/screenshots/
+cypress/videos/
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+
+# Build output
+/dist/
+
+# Environment files
+.env*
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+package-lock.json
