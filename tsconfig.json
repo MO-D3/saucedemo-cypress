@@ -9,7 +9,8 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@pages/*": ["cypress/pages/*"]
+      "@pages/*": ["cypress/pages/*"],
+      "@support/*":["cypress/support/*"],
     }
   },
   "include": ["cypress/**/*.ts", "cypress/**/*.d.ts"]
