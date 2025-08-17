@@ -1,5 +1,5 @@
-import loginPage from '@pages/loginPage';
-import productPage from '@pages/productPage';
+import loginPage from '@pages/login/loginPage';
+import productPage from '@pages/product/productPage';
 
 describe('Login Page', () => {
   let users: Users;

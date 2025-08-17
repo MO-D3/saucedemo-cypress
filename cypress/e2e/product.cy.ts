@@ -1,7 +1,7 @@
-import loginPage from '@pages/loginPage';
-import productPage from '@pages/productPage';
-import drawerMenuPage from '@pages/drawerMenuPage';
-import inventoryList from '@pages/inventoryList';
+import loginPage from '@pages/login/loginPage';
+import productPage from '@pages/product/productPage';
+import drawerMenuPage from '@pages/product/drawerMenuPage';
+import inventoryList from '@pages/product/inventoryList';
 
 describe('Product Page', () => {
   let users: Users;
