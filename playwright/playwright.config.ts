@@ -26,7 +26,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+  baseURL: 'https://www.saucedemo.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -34,30 +34,23 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // Desktop project matching `viewports.ts` desktop entry
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'desktop',
+      use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 720 } },
     },
 
+    // Tablet project: use Playwright tablet emulation and match `viewports.ts`
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'tablet',
+      use: { ...devices['iPad Pro 11'], viewport: { width: 768, height: 1024 } },
     },
 
+    // Mobile project: use Playwright mobile emulation and match `viewports.ts`
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'mobile',
+      use: { ...devices['Pixel 5'], viewport: { width: 375, height: 667 } },
     },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
 
     /* Test against branded browsers. */
     // {

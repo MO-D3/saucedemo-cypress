@@ -2,16 +2,21 @@
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es2015", "dom"],
-    "types": ["cypress"],
+  "lib": ["es2015", "dom"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@cypressPages/*": ["cypress/pages/*"],
-      "@cypressSupport/*":["cypress/support/*"],
+    "@cypressPages/*": ["cypress/pages/*"],
+    "@cypressSupport/*":["cypress/support/*"],
+    "@playwrightFixtures/*": ["playwright/fixtures/*"],
     }
+    ,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "types": ["cypress","node"]
   },
-  "include": ["cypress/**/*.ts", "cypress/**/*.d.ts"]
+  "include": ["cypress/**/*.ts", "cypress/**/*.d.ts", "playwright/**/*.ts", "playwright/**/*.d.ts"]
 }
+
