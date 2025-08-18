@@ -2,7 +2,7 @@
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
     "target": "es6",
-  "lib": ["es2015", "dom"],
+    "lib": ["es2015", "dom"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -17,6 +17,6 @@
     "moduleResolution": "node",
     "types": ["cypress","node"]
   },
-  "include": ["cypress/**/*.ts", "cypress/**/*.d.ts", "playwright/**/*.ts", "playwright/**/*.d.ts"]
+  "include": ["cypress/**/*.ts", "playwright/**/*.ts"]
 }
 
