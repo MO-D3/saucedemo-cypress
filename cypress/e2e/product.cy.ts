@@ -1,8 +1,8 @@
-import loginPage from '@pages/login/loginPage';
-import productPage from '@pages/product/productPage';
-import drawerMenuPage from '@pages/product/drawerMenuPage';
-import inventoryList from '@pages/product/inventoryList';
-import VIEWPORTS from '@support/viewports';
+import loginPage from '@cypressPages/login/loginPage';
+import productPage from '@cypressPages/product/productPage';
+import drawerMenuPage from '@cypressPages/product/drawerMenuPage';
+import inventoryList from '@cypressPages/product/inventoryList';
+import VIEWPORTS from '@cypressSupport/viewports';
 
 VIEWPORTS.forEach((vp) => {
   describe(`Product Page - ${vp.name}`, () => {

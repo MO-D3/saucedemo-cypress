@@ -1,6 +1,6 @@
-import loginPage from '@pages/login/loginPage';
-import productPage from '@pages/product/productPage';
-import VIEWPORTS from '@support/viewports';
+import loginPage from '@cypressPages/login/loginPage';
+import productPage from '@cypressPages/product/productPage';
+import VIEWPORTS from '@cypressSupport/viewports';
 
 VIEWPORTS.forEach((vp) => {
   describe(`Login Page - ${vp.name}`, () => {
