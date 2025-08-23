@@ -7,8 +7,9 @@
     "cy:open": "cypress open"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@tsconfig/strictest": "^2.0.5",
-  "cypress": "14.5.4",
-  "typescript": "^5.9.2"
+    "cypress": "14.5.4",
+    "typescript": "^5.9.2"
   }
 }

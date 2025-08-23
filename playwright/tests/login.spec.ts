@@ -1,4 +1,4 @@
-import { test, expect } from '@playwrightFixtures/pages.fixture';
+import { test, expect } from '@playwrightFixtures/createPage.fixture';
 import users from '../data/users.json';
 
 test.describe('Login Page', () => {
