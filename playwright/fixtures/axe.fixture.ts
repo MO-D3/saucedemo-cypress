@@ -1,9 +1,10 @@
 import { test as base } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import type {AxeResults} from 'axe-core'
 
 type AxeFixture = {
   axe: {
-    analyze: () => Promise<any>;
+    analyze: () => Promise<AxeResults>;
   };
 };
 
